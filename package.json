@@ -1,0 +1,12 @@
+{
+  "name": "football-template",
+  "version": "1.0.0",
+  "description": "Reusable multi-sport league website template with CMS admin panel",
+  "scripts": {
+    "start": "node admin/server.js",
+    "setup": "node scripts/setup.js",
+    "test": "node --test admin/server.test.js"
+  },
+  "keywords": ["football", "soccer", "sports", "league", "template", "cms"],
+  "license": "MIT"
+}

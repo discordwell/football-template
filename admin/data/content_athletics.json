@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "titleLine1": "YOUR NATION",
+    "titleLine2": "ATHLETICS",
+    "subtitle": "Track and field excellence",
+    "tagline": "Running, jumping, throwing",
+    "ctaText": "Discover More",
+    "backgroundImage": null
+  },
+  "about": {
+    "label": "About Us",
+    "title": "Athletics In Our Nation",
+    "paragraphs": [
+      "The Example Athletics Association governs track and field, road running, and cross country in our nation.",
+      "We develop athletes from grassroots to international competition."
+    ],
+    "image": null,
+    "stats": [],
+    "governance": [
+      { "title": "President", "name": "To be announced", "photo": null }
+    ]
+  },
+  "gallery": {
+    "label": "Gallery",
+    "title": "In Action",
+    "images": []
+  },
+  "contact": {
+    "orgName": "Example Athletics Association",
+    "address": "Capital City\nYour Country",
+    "email": "athletics@yourdomain.com",
+    "facebook": "#",
+    "instagram": "#",
+    "twitter": "#"
+  },
+  "footer": {
+    "affiliations": [],
+    "brandName": "Example Athletics Association",
+    "copyright": "\u00a9 2026 Example Athletics Association. All rights reserved.",
+    "tagline": "Track and field for all"
+  }
+}

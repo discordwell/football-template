@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "titleLine1": "YOUR NATION",
+    "titleLine2": "VOLLEYBALL",
+    "subtitle": "Spike, set, serve",
+    "tagline": "Volleyball across the nation",
+    "ctaText": "Discover More",
+    "backgroundImage": null
+  },
+  "about": {
+    "label": "About Us",
+    "title": "Volleyball In Our Nation",
+    "paragraphs": [
+      "The Example Volleyball Federation promotes volleyball at all levels across our nation.",
+      "From beach volleyball to indoor competition, we are growing the sport for everyone."
+    ],
+    "image": null,
+    "stats": [],
+    "governance": [
+      { "title": "President", "name": "To be announced", "photo": null }
+    ]
+  },
+  "gallery": {
+    "label": "Gallery",
+    "title": "In Action",
+    "images": []
+  },
+  "contact": {
+    "orgName": "Example Volleyball Federation",
+    "address": "Capital City\nYour Country",
+    "email": "volleyball@yourdomain.com",
+    "facebook": "#",
+    "instagram": "#",
+    "twitter": "#"
+  },
+  "footer": {
+    "affiliations": [],
+    "brandName": "Example Volleyball Federation",
+    "copyright": "\u00a9 2026 Example Volleyball Federation. All rights reserved.",
+    "tagline": "Volleyball for all"
+  }
+}

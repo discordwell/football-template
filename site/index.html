@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Hub</title>
+    <!-- OG tags: update these with your org details, or run "npm run setup" -->
+    <meta name="description" content="Multi-sport hub — your national federations in one place.">
+    <meta property="og:title" content="Sports Hub">
+    <meta property="og:description" content="National Federations. One Team. Sport across our nation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/landing.css">
+</head>
+<body>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero__wave hero__wave--top"></div>
+        <div class="hero__content">
+            <div class="hero__badge" id="heroBadge">NOC</div>
+            <h1 class="hero__title" id="heroTitle">SPORTS HUB</h1>
+            <p class="hero__tagline" id="heroTagline">National Federations. One Team.</p>
+            <p class="hero__subtitle" id="heroSubtitle">Sport across our nation</p>
+        </div>
+        <div class="hero__wave hero__wave--bottom"></div>
+    </section>
+
+    <!-- Sports Grid -->
+    <section class="sports">
+        <div class="container">
+            <div class="sports__header">
+                <span class="sports__label">Our Federations</span>
+                <h2 class="sports__title">Choose a Sport</h2>
+            </div>
+            <div class="sports__grid" id="sportsGrid">
+                <!-- Cards injected by landing.js -->
+                <div class="sports__loading">Loading federations...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__brand" id="footerBrand">Sports Hub</div>
+            <p class="footer__text" id="footerText">
+                National Olympic Committee<br>
+                Your City, Your Country
+            </p>
+            <p class="footer__copy" id="footerCopy">&copy; 2026 Sports Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/landing.js"></script>
+</body>
+</html>

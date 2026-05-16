@@ -1,0 +1,23 @@
+# League Template — systemd service
+# Copy to /etc/systemd/system/league-admin.service
+# Replace YOUR_USER and /opt/league-template with your values.
+#
+# sudo systemctl daemon-reload
+# sudo systemctl enable league-admin
+# sudo systemctl start league-admin
+
+[Unit]
+Description=League Admin CMS
+After=network.target
+
+[Service]
+Type=simple
+User=YOUR_USER
+WorkingDirectory=/opt/league-template/admin
+EnvironmentFile=/opt/league-template/.env
+ExecStart=/usr/bin/node /opt/league-template/admin/server.js
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

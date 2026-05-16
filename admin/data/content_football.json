@@ -1,0 +1,132 @@
+{
+  "affiliationBar": {
+    "links": [
+      { "label": "FIFA", "url": "https://www.fifa.com/" },
+      { "label": "AFC", "url": "#" }
+    ],
+    "socials": {
+      "facebook": "#",
+      "instagram": "#",
+      "twitter": "#"
+    }
+  },
+  "hero": {
+    "titleLine1": "YOUR NATION",
+    "titleLine2": "FOOTBALL",
+    "subtitle": "One heart, one strength",
+    "tagline": "The beautiful game across our nation",
+    "ctaText": "Discover More",
+    "backgroundImage": null
+  },
+  "news": {
+    "featured": {
+      "title": "New Season Kicks Off",
+      "excerpt": "The national premier league is back with eight teams competing for the championship.",
+      "date": "2026",
+      "image": null,
+      "category": "Competition"
+    },
+    "articles": []
+  },
+  "about": {
+    "label": "About Us",
+    "title": "Building Football<br>Across Our Nation",
+    "paragraphs": [
+      "The Example Football Association is the governing body for football in our nation, affiliated with FIFA and our continental confederation.",
+      "We are committed to developing football at all levels, from grassroots youth programs to the national team.",
+      "Our mission is to unite communities through the beautiful game."
+    ],
+    "image": null,
+    "stats": [
+      { "number": "8", "label": "Clubs", "desc": "Competing in the premier league" },
+      { "number": "200+", "label": "Players", "desc": "Registered across all divisions" },
+      { "number": "1", "label": "Nation", "desc": "United through football" }
+    ],
+    "governance": [
+      { "title": "President", "name": "To be announced", "photo": null },
+      { "title": "General Secretary", "name": "To be announced", "photo": null }
+    ]
+  },
+  "teams": [
+    {
+      "name": "Men's National Team",
+      "description": "Representing our nation in international competition.",
+      "headerStyle": "men",
+      "stats": [
+        { "label": "Competition", "value": "Regional Games" }
+      ],
+      "image": null
+    },
+    {
+      "name": "Women's National Team",
+      "description": "Growing women's football across the nation.",
+      "headerStyle": "women",
+      "stats": [
+        { "label": "Competition", "value": "Regional Games" }
+      ],
+      "image": null
+    },
+    {
+      "name": "Youth Development",
+      "description": "Building the next generation of talent.",
+      "headerStyle": "youth",
+      "stats": [
+        { "label": "Age Groups", "value": "U-17, U-20" }
+      ],
+      "image": null
+    }
+  ],
+  "competitions": {
+    "league": {
+      "name": "National Premier League",
+      "season": "2026",
+      "sponsor": "",
+      "standings": [],
+      "results": [],
+      "fixtures": [],
+      "teams": []
+    }
+  },
+  "development": {
+    "intro": "Our development programs reach every corner of the nation.",
+    "programs": [
+      {
+        "title": "Grassroots Football",
+        "description": "Introductory football programs for children ages 6-12.",
+        "status": "Active"
+      },
+      {
+        "title": "Coach Education",
+        "description": "FIFA-accredited coaching courses for local coaches.",
+        "status": "Active"
+      },
+      {
+        "title": "Referee Development",
+        "description": "Training and certification for match officials.",
+        "status": "Active"
+      }
+    ]
+  },
+  "sponsors": [],
+  "gallery": {
+    "label": "Gallery",
+    "title": "In Action",
+    "images": []
+  },
+  "contact": {
+    "orgName": "Example Football Association",
+    "address": "Capital City\nYour Country",
+    "email": "football@yourdomain.com",
+    "facebook": "#",
+    "instagram": "#",
+    "twitter": "#"
+  },
+  "footer": {
+    "affiliations": [
+      { "badge": "FIFA", "label": "FIFA Member", "url": "https://www.fifa.com/" }
+    ],
+    "brandName": "Example Football Association",
+    "copyright": "\u00a9 2026 Example Football Association. All rights reserved.",
+    "tagline": "The beautiful game, for everyone"
+  }
+}

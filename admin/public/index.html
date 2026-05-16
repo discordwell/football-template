@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin — Sports Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-card">
+            <div class="login-brand">
+                <span class="login-star">&#9733;</span>
+                <h1 id="loginBrand">ADMIN</h1>
+                <p>Content Management</p>
+            </div>
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="loginUser">Username</label>
+                    <input type="text" id="loginUser" autocomplete="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPass">Password</label>
+                    <input type="password" id="loginPass" autocomplete="current-password" required>
+                </div>
+                <button type="submit" class="btn btn--primary" id="loginBtn">Sign In</button>
+                <p id="loginError" class="login-error" hidden></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="admin" hidden>
+        <!-- Top Bar -->
+        <header class="topbar">
+            <div class="topbar__left">
+                <span class="topbar__star">&#9733;</span>
+                <span class="topbar__title" id="topbarTitle">Site Admin</span>
+                <select id="sportSelector" class="topbar__sport-select">
+                    <option value="soccer">Soccer</option>
+                </select>
+            </div>
+            <div class="topbar__right">
+                <a href="/soccer" target="_blank" class="btn btn--small btn--outline" id="viewSiteLink">View Site</a>
+                <button id="logoutBtn" class="btn btn--small btn--ghost">Logout</button>
+            </div>
+        </header>
+
+        <div class="admin__body">
+            <!-- Sidebar Tabs -->
+            <nav class="sidebar" id="sidebar">
+                <button class="sidebar__tab sidebar__tab--active" data-section="affiliationBar">Affiliation Bar</button>
+                <button class="sidebar__tab" data-section="hero">Hero</button>
+                <button class="sidebar__tab" data-section="about">About</button>
+                <button class="sidebar__tab" data-section="teams">Teams</button>
+                <button class="sidebar__tab" data-section="development">Development</button>
+                <button class="sidebar__tab" data-section="competitions">Competitions</button>
+                <button class="sidebar__tab" data-section="news">News</button>
+                <button class="sidebar__tab" data-section="sponsors">Sponsors</button>
+                <button class="sidebar__tab" data-section="gallery">Gallery</button>
+                <button class="sidebar__tab" data-section="contact">Contact</button>
+                <button class="sidebar__tab" data-section="footer">Footer</button>
+                <hr class="sidebar__divider">
+                <button class="sidebar__tab" data-section="media">Media Library</button>
+            </nav>
+
+            <!-- Content Area -->
+            <main class="editor" id="editor">
+                <!-- Filled dynamically by admin.js -->
+            </main>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast" hidden></div>
+
+    <script src="admin.js"></script>
+    <script>
+    fetch('/api/config').then(r => r.json()).then(c => {
+        if (c.orgName) {
+            var b = document.getElementById('loginBrand');
+            if (b) b.textContent = c.orgName.toUpperCase();
+            var t = document.getElementById('topbarTitle');
+            if (t) t.textContent = c.orgName + ' Admin';
+            document.title = 'Admin \u2014 ' + c.orgName;
+        }
+    }).catch(function(){});
+    </script>
+</body>
+</html>

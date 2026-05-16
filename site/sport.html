@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Hub</title>
+    <!-- OG tags: update these with your org details, or run "npm run setup" -->
+    <meta name="description" content="Official site — Sports Hub">
+    <meta property="og:title" content="Sports Hub">
+    <meta property="og:description" content="National Federations. One Team. Sport across our nation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles.css?v=4">
+</head>
+<body>
+    <!-- Affiliation Bar -->
+    <div class="affiliation-bar" id="affiliationBar" data-section="affiliationBar">
+        <div class="affiliation-bar__inner">
+            <div class="affiliation-bar__links" id="abLinks">
+            </div>
+            <div class="affiliation-bar__socials" id="abSocials">
+                <a href="#" class="affiliation-bar__social" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="#" class="affiliation-bar__social" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="#" class="affiliation-bar__social" aria-label="Twitter / X">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav" aria-label="Main navigation">
+        <div class="nav__inner">
+            <a href="#hero" class="nav__brand" aria-label="Home">
+                <img src="" alt="" class="nav__crest" id="navCrest" style="display:none">
+                <span class="nav__brand-text" id="navBrandText">Sports Hub</span>
+            </a>
+            <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+            </button>
+            <ul class="nav__links" id="navLinks" role="list">
+                <li><a href="#hero" class="nav__link">Home</a></li>
+                <li><a href="#news" class="nav__link" data-nav-section="news">News</a></li>
+                <li><a href="#about" class="nav__link" data-nav-section="about">About</a></li>
+                <li><a href="#competitions" class="nav__link" data-nav-section="competitions">Competitions</a></li>
+                <li><a href="#development" class="nav__link" data-nav-section="development">Development</a></li>
+                <li><a href="#contact" class="nav__link" data-nav-section="contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile overlay -->
+    <div class="nav__overlay" id="navOverlay" aria-hidden="true"></div>
+
+    <!-- Hero -->
+    <section class="hero" id="hero" data-section="hero">
+        <div class="hero__bg" id="heroBg"></div>
+        <div class="hero__content">
+            <h1 class="hero__title">
+                <span class="hero__title-line">YOUR NATION</span>
+                <span class="hero__title-line hero__title-line--accent">SPORT</span>
+            </h1>
+            <p class="hero__subtitle"></p>
+            <p class="hero__tagline"></p>
+            <a href="#about" class="hero__cta">Discover More</a>
+        </div>
+    </section>
+
+    <!-- News -->
+    <section class="news section section--dark" id="news" data-section="news">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__label section__label--light">Latest News</span>
+                <h2 class="section__title section__title--light">Latest Updates</h2>
+            </div>
+            <div class="news__featured reveal">
+                <article class="news-hero">
+                    <div class="news-hero__image">
+                        <div class="news-hero__placeholder"></div>
+                    </div>
+                    <div class="news-hero__content">
+                        <span class="news__pill">Featured</span>
+                        <h3 class="news-hero__title">News coming soon</h3>
+                        <p class="news-hero__excerpt">Check back for the latest updates.</p>
+                        <span class="news-hero__date"></span>
+                    </div>
+                </article>
+            </div>
+            <div class="news__grid" id="newsGrid">
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about section section--white" id="about" data-section="about">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__label">About Us</span>
+                <h2 class="section__title">About</h2>
+            </div>
+            <div class="about__content reveal">
+                <div class="about__text">
+                </div>
+            </div>
+            <div class="about__stats reveal">
+            </div>
+            <!-- Governance -->
+            <div class="governance reveal">
+                <h3 class="governance__heading">Organisation</h3>
+                <div class="governance__grid" id="govGrid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teams -->
+    <section class="teams section section--sand" id="teams" data-section="teams">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__label">Our Teams</span>
+                <h2 class="section__title">Our Teams</h2>
+            </div>
+            <div class="teams__grid" id="teamsGrid">
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitions -->
+    <section class="competitions section section--white" id="competitions" data-section="competitions">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__label">COMPETITIONS</span>
+                <h2 class="section__title">Competitions</h2>
+            </div>
+            <div id="compLeague">
+                <p class="league-sponsor reveal"></p>
+            </div>
+            <div class="competitions__grid" id="compGrid"></div>
+        </div>
+    </section>
+
+    <!-- Development -->
+    <section class="development section section--sand" id="development" data-section="development">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__label">Development</span>
+                <h2 class="section__title">Growing the Game</h2>
+            </div>
+            <p class="development__intro reveal"></p>
+            <div class="development__grid" id="devGrid">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors -->
+    <section class="sponsors section section--white" id="sponsors" data-section="sponsors">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__label">Partners &amp; Sponsors</span>
+                <h2 class="section__title">Our Partners</h2>
+            </div>
+            <div class="sponsors__grid reveal" id="sponsorsGrid">
+            </div>
+            <div class="sponsors__cta reveal">
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery section section--sand" id="gallery" data-section="gallery">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__label">Gallery</span>
+                <h2 class="section__title">In Action</h2>
+            </div>
+            <div class="gallery__grid reveal" id="galleryGrid">
+                <div class="gallery__empty">
+                    <span class="gallery__empty-icon">&#128247;</span>
+                    <span class="gallery__empty-text">Gallery coming soon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section section--navy" id="contact" data-section="contact">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__label section__label--light">Get in Touch</span>
+                <h2 class="section__title section__title--light">Contact Us</h2>
+            </div>
+            <div class="contact__grid">
+                <div class="contact__info reveal">
+                    <div class="contact__detail">
+                        <h3 id="contactOrgName">Contact Us</h3>
+                        <p id="contactAddress">Your City<br>Your Country</p>
+                    </div>
+                    <div class="contact__detail">
+                        <h4>Email</h4>
+                        <p><a href="mailto:info@yourdomain.com" id="contactEmail">info@yourdomain.com</a></p>
+                    </div>
+                    <div class="contact__detail">
+                        <h4>Follow Us</h4>
+                        <div class="contact__socials" id="contactSocials">
+                            <a href="#" class="contact__social" aria-label="Facebook">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </a>
+                            <a href="#" class="contact__social" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            </a>
+                            <a href="#" class="contact__social" aria-label="Twitter / X">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact__form reveal" id="contactForm" action="mailto:info@yourdomain.com" method="POST" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="form-input form-textarea" placeholder="Your message..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--gold btn--full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" data-section="footer">
+        <div class="container">
+            <div class="footer__columns">
+                <div class="footer__col-brand">
+                    <div class="footer__brand">
+                        <a href="/" class="footer__home-link" id="footerHomeLink">Sports Hub</a>
+                    </div>
+                    <p class="footer__tagline-text" id="footerTagline"></p>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Quick Links</h4>
+                    <div class="footer__col-links" id="footerQuickLinks">
+                        <a href="#news" class="footer__col-link">News</a>
+                        <a href="#about" class="footer__col-link">About</a>
+                        <a href="#contact" class="footer__col-link">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer__col-title">Connect</h4>
+                    <div class="footer__col-links">
+                        <a href="#contact" class="footer__col-link">Contact Us</a>
+                        <a href="#gallery" class="footer__col-link">Gallery</a>
+                        <a href="/" class="footer__col-link">All Sports</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__affiliations" id="affiliations">
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy" id="footerCopy">&copy; 2026 Sports Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Keepie-Uppie Game (loaded dynamically for soccer only) -->
+    <div id="kickups" class="kickups" style="display:none;">
+        <div class="kickups__grass"></div>
+        <canvas id="kickupsCanvas" class="kickups__canvas"></canvas>
+        <div class="kickups__score" id="kickupsScore">0</div>
+        <div class="kickups__best" id="kickupsBest">0</div>
+        <div class="kickups__hint" id="kickupsHint">B to end game</div>
+    </div>
+
+    <script src="/app.js?v=4"></script>
+</body>
+</html>

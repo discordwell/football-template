@@ -1,0 +1,49 @@
+# League Template — Caddyfile
+# Replace YOURDOMAIN.COM and /opt/league-template with your values.
+
+YOURDOMAIN.COM, www.YOURDOMAIN.COM {
+    encode zstd gzip
+
+    header {
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "SAMEORIGIN"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        -Server
+    }
+
+    # API + admin panel -> Express
+    handle /api/* {
+        reverse_proxy localhost:3200
+    }
+
+    handle /admin* {
+        reverse_proxy localhost:3200
+    }
+
+    # Uploaded images served directly by Caddy
+    handle /uploads/* {
+        root * /opt/league-template/admin
+        file_server
+    }
+
+    # Sport pages: any path not matching above -> sport.html (SPA fallback)
+    @sport {
+        not path /api/* /admin* /uploads/* /landing.css /landing.js /styles.css /app.js /kickups.js /assets/*
+        not path /
+        path_regexp sport ^/[a-z][a-z0-9-]*$
+    }
+    handle @sport {
+        root * /opt/league-template/site
+        try_files {path} /sport.html
+        file_server
+    }
+
+    # Landing page and static assets
+    root * /opt/league-template/site
+    file_server
+
+    handle_errors {
+        rewrite * /index.html
+        file_server
+    }
+}

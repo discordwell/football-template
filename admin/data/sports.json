@@ -1,0 +1,37 @@
+{
+  "sports": [
+    {
+      "slug": "football",
+      "name": "Football",
+      "federation": "Example Football Association",
+      "abbreviation": "EFA",
+      "color": "#009FDB",
+      "icon": "football",
+      "featured": true,
+      "sections": ["affiliationBar", "hero", "news", "about", "teams", "competitions", "development", "sponsors", "gallery", "contact", "footer"],
+      "extras": ["kickups"]
+    },
+    {
+      "slug": "athletics",
+      "name": "Athletics",
+      "federation": "Example Athletics Association",
+      "abbreviation": "EAA",
+      "color": "#E63946",
+      "icon": "athletics",
+      "featured": false,
+      "sections": ["hero", "about", "gallery", "contact", "footer"],
+      "extras": []
+    },
+    {
+      "slug": "volleyball",
+      "name": "Volleyball",
+      "federation": "Example Volleyball Federation",
+      "abbreviation": "EVF",
+      "color": "#F77F00",
+      "icon": "volleyball",
+      "featured": false,
+      "sections": ["hero", "about", "gallery", "contact", "footer"],
+      "extras": []
+    }
+  ]
+}

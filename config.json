@@ -1,0 +1,34 @@
+{
+  "site": {
+    "orgName": "Your Sports Federation",
+    "orgAbbreviation": "YSF",
+    "umbrellaBody": "National Olympic Committee",
+    "umbrellaAbbreviation": "NOC",
+    "domain": "localhost:3200",
+    "tagline": "Sport Across Our Nation",
+    "heroTitle": "YOUR NATION",
+    "heroSubtitle": "National Federations. One Team.",
+    "description": "Sport across our nation",
+    "location": {
+      "city": "Capital City",
+      "country": "Your Country",
+      "region": "Your Region"
+    },
+    "contact": {
+      "email": "info@yourdomain.com",
+      "address": "Capital City\nYour Country"
+    },
+    "social": {
+      "facebook": "",
+      "instagram": "",
+      "twitter": ""
+    },
+    "copyright": {
+      "year": 2026,
+      "holder": "Your Sports Federation"
+    }
+  },
+  "features": {
+    "githubSync": false
+  }
+}
