@@ -583,6 +583,14 @@
             const footerHome = document.getElementById('footerHomeLink');
             if (footerHome) footerHome.textContent = orgName;
 
+            // Single-sport mode: hide "All Sports" links
+            if (!siteConfig.multiSport) {
+                if (footerHome) footerHome.href = '#hero';
+                document.querySelectorAll('a[href="/"]').forEach(a => {
+                    if (a !== footerHome) a.style.display = 'none';
+                });
+            }
+
             // Load sport-specific extras
             if (sportConfig.extras && sportConfig.extras.includes('kickups')) {
                 const kickupsEl = document.getElementById('kickups');

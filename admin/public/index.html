@@ -88,6 +88,10 @@
             if (t) t.textContent = c.orgName + ' Admin';
             document.title = 'Admin \u2014 ' + c.orgName;
         }
+        if (!c.multiSport) {
+            var s = document.getElementById('sportSelector');
+            if (s) s.style.display = 'none';
+        }
     }).catch(function(){});
     </script>
 </body>

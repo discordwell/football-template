@@ -62,6 +62,12 @@ async function hydrateConfig() {
         if (!res.ok) return;
         const cfg = await res.json();
 
+        // Single-sport mode: skip landing page, go straight to football
+        if (!cfg.multiSport) {
+            window.location.replace('/football');
+            return;
+        }
+
         document.title = (cfg.orgName || 'Sports Hub') + ' — Sports Hub';
 
         const badge = document.getElementById('heroBadge');

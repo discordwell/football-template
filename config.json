@@ -29,6 +29,7 @@
     }
   },
   "features": {
+    "multiSport": false,
     "githubSync": false
   }
 }

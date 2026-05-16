@@ -41,6 +41,8 @@ async function main() {
   const region = await ask('Region (e.g. "South Pacific")', '');
   const email = await ask('Contact email', `info@${domain}`);
   const adminPassword = await ask('Admin panel password', 'changeme');
+  const multiSportAnswer = await ask('Enable multi-sport mode? (y/n)', 'n');
+  const multiSport = multiSportAnswer.toLowerCase().startsWith('y');
 
   // Generate config.json
   const config = {
@@ -52,14 +54,14 @@ async function main() {
       domain,
       tagline: `Sport Across ${country}`,
       heroTitle: country.toUpperCase(),
-      heroSubtitle: 'National Federations. One Team.',
-      description: `Sport across ${country}`,
+      heroSubtitle: multiSport ? 'National Federations. One Team.' : `The beautiful game in ${country}`,
+      description: multiSport ? `Sport across ${country}` : `Football in ${country}`,
       location: { city, country, region },
       contact: { email, address: `${city}\n${country}` },
       social: { facebook: '', instagram: '', twitter: '' },
       copyright: { year: new Date().getFullYear(), holder: orgName }
     },
-    features: { githubSync: false }
+    features: { multiSport, githubSync: false }
   };
 
   fs.writeFileSync(CONFIG_PATH, JSON.stringify(config, null, 2) + '\n', 'utf8');

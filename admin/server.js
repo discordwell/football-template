@@ -255,9 +255,13 @@ app.get('/api/auth/check', auth, (req, res) => {
   res.json({ ok: true, user: req.user.user });
 });
 
-// Site config (public — non-secret identity fields)
+// Site config (public — non-secret identity fields + feature flags)
 app.get('/api/config', (req, res) => {
-  res.json(siteConfig.site || {});
+  const features = siteConfig.features || {};
+  res.json({
+    ...(siteConfig.site || {}),
+    multiSport: !!features.multiSport
+  });
 });
 
 // Sports registry (public)
