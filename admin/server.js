@@ -385,6 +385,15 @@ app.delete('/api/upload/:filename', auth, (req, res) => {
   );
 });
 
+// Serve the public site so `npm start` works standalone (production setups
+// usually let Caddy/nginx serve site/ directly — this just makes DIY easy).
+const SITE_DIR = path.join(__dirname, '..', 'site');
+app.use(express.static(SITE_DIR));
+// SPA fallback: single-segment paths (e.g. /football) -> sport.html
+app.get(/^\/[a-z][a-z0-9-]*$/, (req, res) => {
+  res.sendFile(path.join(SITE_DIR, 'sport.html'));
+});
+
 // Multer error handler
 app.use((err, req, res, next) => {
   if (err instanceof multer.MulterError) {
